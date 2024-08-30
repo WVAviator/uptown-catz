@@ -23,7 +23,7 @@ const config: Config = {
             primary: '#E4B870',
             secondary: '#F4AF9E',
             background: {
-              DEFAULT: '#F6FFFE',
+              DEFAULT: '#FFFFFF',
               '50': '#F6FFFE',
               '100': '#ECFFFE',
               '200': '#E2FFFD',

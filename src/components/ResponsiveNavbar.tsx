@@ -75,9 +75,6 @@ const ResponsiveNavbar = ({ items }: ResponsiveNavbarProps) => {
         })}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
           <StyledButton>Donate</StyledButton>
         </NavbarItem>
