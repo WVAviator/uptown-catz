@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Comic_Neue, Satisfy } from 'next/font/google';
 import './globals.css';
 import { NextUIProvider } from '@nextui-org/react';
+import ResponsiveNavbar from '../components/ResponsiveNavbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const comicNeue = Comic_Neue({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,10 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <NextUIProvider>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
-    </NextUIProvider>
+    <html lang="en">
+      <body className={comicNeue.className}>
+        <NextUIProvider>
+          <ResponsiveNavbar
+            items={[
+              { name: 'Adopt', href: 'adopt' },
+              { name: 'About', href: 'about' },
+              { name: 'Contact', href: 'contact' },
+            ]}
+          />
+          {children}
+        </NextUIProvider>
+      </body>
+    </html>
   );
 }
