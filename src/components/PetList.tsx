@@ -7,6 +7,7 @@ const PetList = async () => {
     <div className="flex flex-wrap items-center justify-center gap-4">
       {animals.map((animal) => (
         <PetCard
+          key={animal.ID}
           name={animal.Name}
           summary={`${animal.Age}${animal.Sex === 'Male' ? 'M' : 'F'} ${
             animal.Breed
