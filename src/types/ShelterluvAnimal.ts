@@ -43,8 +43,8 @@ export interface ShelterluvAnimal {
     IssuingShelter: string;
     Type: string;
   }[];
-  LastIntakeUnixTime: Date;
-  LastUpdatedUnixTime: Date;
+  LastIntakeUnixTime: number;
+  LastUpdatedUnixTime: number;
   Attributes: {
     'Internal-ID': string;
     AttributeName: string;

@@ -18,7 +18,8 @@ const StyledButton = ({
       as={Link}
       href={href || '#'}
       variant="solid"
-      className={`text-default ${buttonColor}`}
+      className={`text-[18px] py-0 ${buttonColor}`}
+      size="sm"
     >
       {children}
     </Button>

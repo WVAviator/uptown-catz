@@ -1,4 +1,5 @@
 import { Card, CardBody, CardHeader, Image } from '@nextui-org/react';
+import Sex from './Sex';
 
 interface PetCardProps {
   name: string;
@@ -8,26 +9,32 @@ interface PetCardProps {
     src: string;
     alt: string;
   };
+  sex: 'Male' | 'Female' | 'Unknown';
 }
 
-const PetCard = ({ name, summary, description, image }: PetCardProps) => {
+const PetCard = ({ name, summary, description, image, sex }: PetCardProps) => {
   return (
-    <Card className="py-4 max-w-[294px]">
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-tiny uppercase font-bold">{summary}</p>
-        {description && (
-          <small className="text-default-500">{description}</small>
-        )}
-        <h4 className="font-bold text-large">{name}</h4>
-      </CardHeader>
-      <CardBody className="overflow-visible py-2">
+    <Card className=" max-w-[294px] h-[400px] bg-foreground-100">
+      <CardBody className="overflow-visible py-2 aspect-square p-4 bg-foreground-100">
         <Image
           alt={image.alt}
-          className="object-cover rounded-xl"
+          className="object-cover rounded-xl shadow-inner"
           src={image.src}
           width={270}
         />
       </CardBody>
+      <CardHeader className="pt-2 px-4 flex-col items-start">
+        <div className="flex items-center gap-2">
+          <h3 className="font-bold text-xl">{name}</h3>
+          <span>
+            <Sex sex={sex} />
+          </span>
+        </div>
+        <p className="text-tiny uppercase font-bold">{summary}</p>
+        {description && (
+          <small className="text-default-500">{description}</small>
+        )}
+      </CardHeader>
     </Card>
   );
 };

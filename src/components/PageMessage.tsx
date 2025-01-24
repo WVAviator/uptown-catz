@@ -11,7 +11,7 @@ interface PageMessageProps {
 
 const PageMessage = ({ title, message, image }: PageMessageProps) => {
   return (
-    <div className="flex gap-4 max-w-[525px]">
+    <div className="flex gap-4 max-w-[525px] items-center">
       <div className="flex flex-col gap-4">
         <h2 className="font-bold text-2xl">{title}</h2>
         <p>{message}</p>
