@@ -3,6 +3,7 @@ import { Comic_Neue, Satisfy } from 'next/font/google';
 import './globals.css';
 import { NextUIProvider } from '@nextui-org/react';
 import ResponsiveNavbar from '../components/ResponsiveNavbar';
+import { usePathname } from 'next/navigation';
 
 const comicNeue = Comic_Neue({ weight: '400', subsets: ['latin'] });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
               { name: 'Contact', href: 'contact' },
             ]}
           />
-          <main className="flex min-h-screen flex-col items-center justify-between p-8 max-w-[1024px] m-auto">
+          <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 max-w-[1024px] md:mx-auto">
             {children}
           </main>
         </NextUIProvider>

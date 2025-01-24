@@ -12,7 +12,7 @@ const Logo = () => {
         alt="A silhouette of a cat walking."
         width={32}
         height={32}
-        className="mb-1"
+        className="mb-1 w-auto"
       />
       <p className={`font-bold text-lg text-foreground ${satisfy.className}`}>
         UPTOWN CATZ
