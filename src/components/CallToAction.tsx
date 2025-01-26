@@ -28,8 +28,8 @@ const CallToAction: React.FC<CallToActionProps> = ({ text, href }) => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'bottom bottom',
-          end: 'center center',
+          start: 'top bottom',
+          end: 'top center',
           scrub: true,
         },
       }

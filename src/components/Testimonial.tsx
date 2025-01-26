@@ -28,7 +28,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
     gsap.fromTo(
       contentRef.current,
       {
-        y: 64,
+        y: 0,
         opacity: 0,
       },
       {
@@ -57,11 +57,11 @@ const Testimonial: React.FC<TestimonialProps> = ({
       </div>
       <div
         ref={triggerRef}
-        className="relative w-[90%] min-h-36 mx-auto opacity-90 backdrop-blur-md"
+        className="relative w-[90%] min-h-36 mx-auto opacity-90"
       >
         <div
           ref={contentRef}
-          className="p-4 bg-foreground-200 rounded-md flex flex-col gap-2"
+          className="p-4 bg-foreground-200 rounded-md flex flex-col gap-2 backdrop-blur-md"
         >
           {children}
         </div>
