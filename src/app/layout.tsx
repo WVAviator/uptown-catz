@@ -25,8 +25,8 @@ export default function RootLayout({
         className={`${comicNeue.className} relative bg-background-50 w-svw overflow-x-hidden`}
       >
         <BlobBackground />
-        <div>
-          <NextUIProvider>
+        <NextUIProvider>
+          <div className="flex flex-col justify-between min-h-screen">
             <ResponsiveNavbar
               items={[
                 { name: 'Adopt', href: 'adopt' },
@@ -34,12 +34,12 @@ export default function RootLayout({
                 { name: 'Contact', href: 'contact' },
               ]}
             />
-            <main className="relative flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 max-w-[1024px] md:mx-auto overflow-x-hidden">
+            <main className="relative flex-1 flex flex-col items-center justify-between p-4 sm:p-8 max-w-[1024px] md:mx-auto overflow-x-hidden">
               {children}
             </main>
             <Footer />
-          </NextUIProvider>
-        </div>
+          </div>
+        </NextUIProvider>
       </body>
     </html>
   );
