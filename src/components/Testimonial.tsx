@@ -26,9 +26,9 @@ const Testimonial: React.FC<TestimonialProps> = ({
   React.useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const timeout = setTimeout(() => {
+    const interval = setInterval(() => {
       ScrollTrigger.refresh();
-    }, 0);
+    }, 1000);
 
     gsap.fromTo(
       contentRef.current,
@@ -51,7 +51,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
     );
 
     return () => {
-      clearTimeout(timeout);
+      clearInterval(interval);
     };
   }, []);
 
