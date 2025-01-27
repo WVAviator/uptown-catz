@@ -29,7 +29,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ text, href }) => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top bottom',
-          end: 'top center',
+          end: 'top 65%',
           scrub: true,
         },
       }

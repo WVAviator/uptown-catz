@@ -39,12 +39,8 @@ const Testimonial: React.FC<TestimonialProps> = ({
         scrollTrigger: {
           trigger: triggerRef.current,
           start: 'top bottom',
-          end: 'top center',
+          end: 'top 65%',
           scrub: true,
-          markers: true,
-          onUpdate: (self) => {
-            console.log('Current scroller:', self.scroller);
-          },
         },
       }
     );
@@ -59,7 +55,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
       <div className=" object-cover rounded-md overflow-hidden">
         <Image src={image.src} alt={image.alt} width={468} height={468} />
       </div>
-      <div ref={triggerRef} className="w-[90%] min-h-36 mx-auto opacity-90">
+      <div ref={triggerRef} className="w-[90%] min-h-36 mx-auto opacity-95">
         <div
           ref={contentRef}
           className="p-4 bg-foreground-200 rounded-md flex flex-col gap-2 backdrop-blur-md"

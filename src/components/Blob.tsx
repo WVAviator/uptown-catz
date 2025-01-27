@@ -13,7 +13,7 @@ const Blob: React.FC<BlobProps> = ({
 }) => {
   return (
     <svg
-      style={{ scale, opacity, rotate: `${rotation}deg`, zIndex: -1000 }}
+      style={{ scale, opacity, rotate: `${rotation}deg` }}
       viewBox="0 0 480 480"
       xmlns="http://www.w3.org/2000/svg"
     >
