@@ -3,6 +3,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 interface TestimonialProps {
@@ -25,6 +26,10 @@ const Testimonial: React.FC<TestimonialProps> = ({
   React.useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 0);
+
     gsap.fromTo(
       contentRef.current,
       {
@@ -44,6 +49,10 @@ const Testimonial: React.FC<TestimonialProps> = ({
         },
       }
     );
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (
