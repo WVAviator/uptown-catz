@@ -17,16 +17,18 @@ import Logo from './Logo';
 import StyledButton from './StyledButton';
 import { IoIosMenu, IoIosClose } from 'react-icons/io';
 
+export const CASHAPP_LINK = "https://cash.app/$uptowncatz/5.0";
+
 export interface MenuItem {
   name: string;
   href: string;
   color?:
-    | 'primary'
-    | 'foreground'
-    | 'secondary'
-    | 'success'
-    | 'warning'
-    | 'danger';
+  | 'primary'
+  | 'foreground'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger';
 }
 
 export interface ResponsiveNavbarProps {
@@ -76,7 +78,7 @@ const ResponsiveNavbar = ({ items }: ResponsiveNavbarProps) => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <StyledButton>Donate</StyledButton>
+          <StyledButton href={CASHAPP_LINK}>Donate</StyledButton>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="shadow-sm">

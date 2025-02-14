@@ -4,7 +4,6 @@ import './globals.css';
 import { NextUIProvider } from '@nextui-org/react';
 import ResponsiveNavbar from '../components/ResponsiveNavbar';
 import { Footer } from '../components/Footer';
-import Blob from '../components/Blob';
 import BlobBackground from '../components/BlobBackground';
 
 const comicNeue = Comic_Neue({ weight: '400', subsets: ['latin'] });
@@ -21,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.png" sizes="any" />
       <body
         className={`${comicNeue.className} relative bg-background-50 w-svw overflow-x-hidden`}
       >
